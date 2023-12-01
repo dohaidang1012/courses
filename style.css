@@ -26,12 +26,15 @@ f-flex {
 }
 
 .app {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .product {
+  width: 1917px;
+  height: 917px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,12 +44,14 @@ f-flex {
 }
 
 .product__wrapper {
+  width: 1529px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
 }
 .product__wrapper .product__head {
+  max-width: 419px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -82,8 +87,8 @@ f-flex {
   gap: 18px;
 }
 .product__body .product__body--card img {
-  width: 401px;
-  height: 267px;
+  width: 100%;
+  height: 268px;
   flex-shrink: 0;
 }
 .product__body .product__body--card .product__body--content {
@@ -126,8 +131,8 @@ f-flex {
   font-weight: 400;
   line-height: 18px; /* 138.462% */
   letter-spacing: 0.13px;
-  text-decoration-line: strikethrough;
   text-transform: uppercase;
+  text-decoration: line-through;
 }
 .product__body .product__body--card .product__body--content .product__body--price .price--sale {
   color: var(--secondary-color-1, #3f514b);
@@ -172,7 +177,17 @@ f-flex {
   border-bottom: 1px solid #ecedec;
 }
 
-@media only screen and (max-width: 956px) {
+@media only screen and (max-width: 438px) {
+  .product {
+    width: 1917px;
+    display: block;
+    height: 100%;
+    padding: 30px 20px;
+  }
+  .product .product__wrapper {
+    width: 100%;
+    align-items: center;
+  }
   .product .product__wrapper .product__head .product__head--title,
   .product .product__wrapper .product__head .product__head--text {
     text-align: center;
@@ -209,7 +224,15 @@ f-flex {
     padding: 0 10px;
   }
 }
-@media (min-width: 956px) and (max-width: 1349px) {
+@media (min-width: 439px) and (max-width: 1349px) {
+  .product {
+    display: block;
+    height: 100%;
+    padding: 30px 20px;
+  }
+  .product .product__wrapper {
+    width: 100%;
+  }
   .product .product__wrapper .banner__head {
     text-align: center;
   }
@@ -219,7 +242,15 @@ f-flex {
     gap: 23px;
   }
 }
-@media (min-width: 1350px) and (max-width: 1668px) {
+@media (min-width: 1210px) and (max-width: 1600px) {
+  .product {
+    display: block;
+    height: 100%;
+    padding: 0 20px;
+  }
+  .product .product__wrapper {
+    width: 100%;
+  }
   .product .product__wrapper .banner__head {
     text-align: center;
   }
